@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "943769743214",
+    "firebase_url": "https://admob-app-id-7315422877.firebaseio.com",
+    "project_id": "admob-app-id-7315422877",
+    "storage_bucket": "admob-app-id-7315422877.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:943769743214:android:08263abfa5d464b3",
+        "android_client_info": {
+          "package_name": "com.icedoutindustries.sauceboard"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "943769743214-ops5stkdvmirt63msbbm4okv5j1p99m1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBK_ZIsU-wvUQLPEnTVk62dqrRkxRL8odk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

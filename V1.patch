@@ -1,0 +1,466 @@
+Index: app/build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/build.gradle	(revision )
++++ app/build.gradle	(revision )
+@@ -0,0 +1,28 @@
++apply plugin: 'com.android.application'
++
++android {
++    compileSdkVersion 23
++    buildToolsVersion "23.0.2"
++
++    defaultConfig {
++        applicationId "com.icedoutindustries.sauceboard"
++        minSdkVersion 19
++        targetSdkVersion 21
++        versionCode 1
++        versionName "1.0"
++    }
++    buildTypes {
++        release {
++            minifyEnabled false
++            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
++        }
++    }
++}
++
++dependencies {
++    compile fileTree(dir: 'libs', include: ['*.jar'])
++    testCompile 'junit:junit:4.12'
++    compile 'com.android.support:appcompat-v7:23.1.1'
++    compile 'com.google.android.gms:play-services-ads:8.3.0'
++    // use 8.3.0 or 9.4.0. emulator is being weird
++}
+Index: app/src/main/res/layout/activity_main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/activity_main.xml	(revision )
++++ app/src/main/res/layout/activity_main.xml	(revision )
+@@ -0,0 +1,23 @@
++<?xml version="1.0" encoding="utf-8"?>
++<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    android:paddingBottom="@dimen/activity_vertical_margin"
++    android:paddingLeft="@dimen/activity_horizontal_margin"
++    android:paddingRight="@dimen/activity_horizontal_margin"
++    android:paddingTop="@dimen/activity_vertical_margin"
++    tools:context="com.icedoutindustries.sauceboard.MainActivity">
++
++
++    <ListView
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:id="@+id/listView"
++        android:layout_alignParentLeft="true"
++        android:layout_alignParentStart="true"
++        android:layout_alignParentTop="false"
++        />
++
++
++</RelativeLayout>
+Index: app/src/main/res/values/strings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/values/strings.xml	(revision )
++++ app/src/main/res/values/strings.xml	(revision )
+@@ -0,0 +1,11 @@
++<resources>
++    <string name="app_name">Sauceboard</string>
++    <string name="string0">If you don\'t got sauce then, ya lost</string>
++    <string name="string1">But you can also get lost in the sauce</string>
++    <string name="string2">No meat, just sauce</string>
++    <string name="string3">Overdose of sauce</string>
++    <string name="string4">Saucin</string>
++    <string name="string5">Saucing on you</string>
++    <string name="string6">Too much sauce</string>
++    <string name="string7">Please don\'t get lost in the sauce</string>
++</resources>
+Index: ../../Library/Preferences/AndroidStudio1.5/options/ignore.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../../Library/Preferences/AndroidStudio1.5/options/ignore.xml	(revision )
++++ ../../Library/Preferences/AndroidStudio1.5/options/ignore.xml	(revision )
+@@ -0,0 +1,34 @@
++<application>
++  <component name="IgnoreSettings" missingGitignore="true" ignoredFileStatus="true" outerIgnoreRules="true" outerIgnoreWrapperHeight="100" version="1.5" starredTemplates="" settingsFixed="true">
++    <languages>
++      <language id="Bazaar" NEW_FILE="true" ENABLE="true" />
++      <language id="CloudFoundry" NEW_FILE="true" ENABLE="false" />
++      <language id="Chef" NEW_FILE="true" ENABLE="false" />
++      <language id="Cvs" NEW_FILE="true" ENABLE="true" />
++      <language id="Darcs" NEW_FILE="true" ENABLE="true" />
++      <language id="Docker" NEW_FILE="true" ENABLE="false" />
++      <language id="ESLint" NEW_FILE="true" ENABLE="false" />
++      <language id="Floobits" NEW_FILE="true" ENABLE="false" />
++      <language id="Fossil" NEW_FILE="true" ENABLE="true" />
++      <language id="Git" NEW_FILE="true" ENABLE="true" />
++      <language id="Git exclude" NEW_FILE="true" ENABLE="true" />
++      <language id="Jetpack" NEW_FILE="true" ENABLE="false" />
++      <language id="JSHint" NEW_FILE="true" ENABLE="false" />
++      <language id="Mercurial" NEW_FILE="true" ENABLE="true" />
++      <language id="Monotone" NEW_FILE="true" ENABLE="true" />
++      <language id="Nodemon" NEW_FILE="true" ENABLE="false" />
++      <language id="Npm" NEW_FILE="true" ENABLE="false" />
++      <language id="Perforce" NEW_FILE="true" ENABLE="true" />
++      <language id="Team Foundation" NEW_FILE="true" ENABLE="true" />
++    </languages>
++    <userTemplates>
++      <template name="Example user template">### Example user template
++
++# IntelliJ project files
++.idea
++*.iml
++out
++gen</template>
++    </userTemplates>
++  </component>
++</application>
+\ No newline at end of file
+Index: app/src/test/java/com/icedoutindustries/sauceboard/ExampleUnitTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/test/java/com/icedoutindustries/sauceboard/ExampleUnitTest.java	(revision )
++++ app/src/test/java/com/icedoutindustries/sauceboard/ExampleUnitTest.java	(revision )
+@@ -0,0 +1,15 @@
++package com.icedoutindustries.sauceboard;
++
++import org.junit.Test;
++
++import static org.junit.Assert.*;
++
++/**
++ * To work on unit tests, switch the Test Artifact in the Build Variants view.
++ */
++public class ExampleUnitTest {
++    @Test
++    public void addition_isCorrect() throws Exception {
++        assertEquals(4, 2 + 2);
++    }
++}
+\ No newline at end of file
+Index: app/src/androidTest/java/com/icedoutindustries/sauceboard/ApplicationTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/androidTest/java/com/icedoutindustries/sauceboard/ApplicationTest.java	(revision )
++++ app/src/androidTest/java/com/icedoutindustries/sauceboard/ApplicationTest.java	(revision )
+@@ -0,0 +1,13 @@
++package com.icedoutindustries.sauceboard;
++
++import android.app.Application;
++import android.test.ApplicationTestCase;
++
++/**
++ * <a href="http://d.android.com/tools/testing/testing_android.html">Testing Fundamentals</a>
++ */
++public class ApplicationTest extends ApplicationTestCase<Application> {
++    public ApplicationTest() {
++        super(Application.class);
++    }
++}
+\ No newline at end of file
+Index: app/src/main/res/layout/list_item.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/list_item.xml	(revision )
++++ app/src/main/res/layout/list_item.xml	(revision )
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="utf-8"?>
++<TextView xmlns:android="http://schemas.android.com/apk/res/android"
++    android:layout_width="match_parent"
++    android:layout_height="85dp">
++
++</TextView>
+\ No newline at end of file
+Index: app/proguard-rules.pro
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/proguard-rules.pro	(revision )
++++ app/proguard-rules.pro	(revision )
+@@ -0,0 +1,17 @@
++# Add project specific ProGuard rules here.
++# By default, the flags in this file are appended to flags specified
++# in /Applications/CS125-v001-mac-64bit/sdk/tools/proguard/proguard-android.txt
++# You can edit the include path and order by changing the proguardFiles
++# directive in build.gradle.
++#
++# For more details, see
++#   http://developer.android.com/guide/developing/tools/proguard.html
++
++# Add any project specific keep options here:
++
++# If your project uses WebView with JS, uncomment the following
++# and specify the fully qualified class name to the JavaScript interface
++# class:
++#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
++#   public *;
++#}
+Index: app/src/main/res/values/styles.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/values/styles.xml	(revision )
++++ app/src/main/res/values/styles.xml	(revision )
+@@ -0,0 +1,8 @@
++<resources>
++
++    <!-- Base application theme. -->
++    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
++        <!-- Customize your theme here. -->
++    </style>
++
++</resources>
+Index: app/src/main/java/com/icedoutindustries/sauceboard/MainActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/icedoutindustries/sauceboard/MainActivity.java	(revision )
++++ app/src/main/java/com/icedoutindustries/sauceboard/MainActivity.java	(revision )
+@@ -0,0 +1,115 @@
++package com.icedoutindustries.sauceboard;
++
++import android.content.Context;
++import android.media.MediaPlayer;
++import android.support.v7.app.AppCompatActivity;
++import android.os.Bundle;
++import android.view.LayoutInflater;
++import android.view.View;
++import android.view.ViewGroup;
++import android.widget.AdapterView;
++import android.widget.ArrayAdapter;
++import android.widget.Button;
++import android.widget.ImageView;
++import android.widget.ListView;
++import android.widget.TextView;
++import android.widget.Toast;
++
++import java.lang.reflect.Array;
++import java.util.ArrayList;
++import java.util.List;
++
++public class MainActivity extends AppCompatActivity {
++
++
++    @Override
++    protected void onCreate(Bundle savedInstanceState) {
++        super.onCreate(savedInstanceState);
++        setContentView(R.layout.activity_main);
++        populateListview();
++
++
++
++    }
++
++    private void populateListview(){
++        String[] myItems = {getString(R.string.string0),getString(R.string.string1),getString(R.string.string2),getString(R.string.string3),getString(R.string.string4),getString(R.string.string5),getString(R.string.string6),getString(R.string.string7)};
++
++        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.list_item, myItems);
++        ListView list = (ListView) findViewById(R.id.listView);
++        list.setAdapter(adapter);
++        regsiterClickCallback();
++
++    }
++
++    private void regsiterClickCallback(){
++        ListView list = (ListView) findViewById(R.id.listView);
++        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
++            final MediaPlayer clip0 = MediaPlayer.create(getBaseContext(), R.raw.no_sauce_then_lost);
++            final MediaPlayer clip1 = MediaPlayer.create(getBaseContext(), R.raw.but_also_lost_in_sauce);
++            final MediaPlayer clip2 = MediaPlayer.create(getBaseContext(), R.raw.no_meat_just_sauce);
++            final MediaPlayer clip3 = MediaPlayer.create(getBaseContext(), R.raw.overdose_sauce);
++            final MediaPlayer clip4 = MediaPlayer.create(getBaseContext(), R.raw.saucin);
++            final MediaPlayer clip5 = MediaPlayer.create(getBaseContext(), R.raw.saucin_on_you);
++            final MediaPlayer clip6 = MediaPlayer.create(getBaseContext(), R.raw.tms2);
++            final MediaPlayer clip7 = MediaPlayer.create(getBaseContext(), R.raw.please_dont_get_lost);
++            final MediaPlayer[] clipArray = {clip0,clip1,clip2,clip3,clip4,clip5,clip6,clip7};
++
++            @Override
++            public void onItemClick(AdapterView<?> parent, View viewClicked, int position, long id) {
++                TextView textView = (TextView) viewClicked;
++                try {
++                    clipArray[position].start();
++                }
++                catch (Exception e){
++
++                }
++            }
++        });
++    }
++
++
++
++
++
++
++    /*private class MyListAdapter extends ArrayAdapter<String>{
++        private int layOut;
++        private MyListAdapter(Context context, int resources, List<String> objects){
++            super(context, resources, objects);
++            layOut = resources;
++        }
++        /*@Override
++        public View getView(final int position, View convertView, ViewGroup parent){
++            ViewHolder mainViewHolder = null;
++
++            if (convertView == null){
++                LayoutInflater inflater = LayoutInflater.from(getContext());
++                convertView = inflater.inflate(layOut, parent, false);
++                ViewHolder viewHolder = new ViewHolder();
++                viewHolder.button = (Button) convertView.findViewById(R.id.listItemBtn);
++                viewHolder.button.setOnClickListener(new View.OnClickListener() {
++                    @Override
++                    public void onClick(View v) {
++                        Toast.makeText(getContext(), "Item was clicked for list item " + position, Toast.LENGTH_SHORT).show();
++                    }
++                });
++                convertView.setTag(viewHolder);
++
++
++            }
++            else{
++                mainViewHolder = (ViewHolder) convertView.getTag();
++                mainViewHolder.button.setText(getItem(position));
++            }
++            return convertView;
++        }*/
++
++
++}
++
++    /*public class ViewHolder {
++        Button button;
++        }*/
++
++
+Index: app/src/main/res/values/dimens.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/values/dimens.xml	(revision )
++++ app/src/main/res/values/dimens.xml	(revision )
+@@ -0,0 +1,5 @@
++<resources>
++    <!-- Default screen margins, per the Android Design guidelines. -->
++    <dimen name="activity_horizontal_margin">16dp</dimen>
++    <dimen name="activity_vertical_margin">16dp</dimen>
++</resources>
+Index: app/src/main/res/values-w820dp/dimens.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/values-w820dp/dimens.xml	(revision )
++++ app/src/main/res/values-w820dp/dimens.xml	(revision )
+@@ -0,0 +1,6 @@
++<resources>
++    <!-- Example customization of dimensions originally defined in res/values/dimens.xml
++         (such as screen margins) for screens with more than 820dp of available width. This
++         would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively). -->
++    <dimen name="activity_horizontal_margin">64dp</dimen>
++</resources>
+Index: app/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/AndroidManifest.xml	(revision )
++++ app/src/main/AndroidManifest.xml	(revision )
+@@ -0,0 +1,39 @@
++<?xml version="1.0" encoding="utf-8"?>
++<manifest xmlns:android="http://schemas.android.com/apk/res/android"
++    package="com.icedoutindustries.sauceboard">
++
++    <!-- Include required permissions for Google Mobile Ads to run. -->
++    <uses-permission android:name="android.permission.INTERNET" />
++    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
++    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
++
++    <application
++        android:allowBackup="true"
++        android:icon="@mipmap/ic_launcher"
++        android:label="@string/app_name"
++        android:supportsRtl="true"
++        android:theme="@style/AppTheme">
++
++        <!-- This meta-data tag is required to use Google Play Services. -->
++        <meta-data
++            android:name="com.google.android.gms.version"
++            android:value="@integer/google_play_services_version" />
++
++        <activity
++            android:name=".MainActivity"
++            android:label="@string/app_name">
++            <intent-filter>
++                <action android:name="android.intent.action.MAIN" />
++
++                <category android:name="android.intent.category.LAUNCHER" />
++            </intent-filter>
++        </activity>
++        <!-- Include the AdActivity configChanges and theme. -->
++        <activity
++            android:name="com.google.android.gms.ads.AdActivity"
++            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
++            android:theme="@android:style/Theme.Translucent" />
++
++    </application>
++
++</manifest>
+Index: ../../Library/Preferences/AndroidStudio1.5/options/github_settings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../../Library/Preferences/AndroidStudio1.5/options/github_settings.xml	(date 1471312587000)
++++ ../../Library/Preferences/AndroidStudio1.5/options/github_settings.xml	(revision )
+@@ -1,6 +1,7 @@
+ <application>
+   <component name="GithubSettings">
+-    <option name="LOGIN" value="IcedOutIndustries" />
++    <option name="LOGIN" value="IcedOutIndustries@gmail.com" />
+     <option name="AUTH_TYPE" value="BASIC" />
++    <option name="CONNECTION_TIMEOUT" value="4500" />
+   </component>
+ </application>
+\ No newline at end of file
+Index: ../../Library/Preferences/AndroidStudio1.5/options/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../../Library/Preferences/AndroidStudio1.5/options/vcs.xml	(date 1471312587000)
++++ ../../Library/Preferences/AndroidStudio1.5/options/vcs.xml	(revision )
+@@ -6,7 +6,12 @@
+           <option name="url" value="http://github.com" />
+           <option name="userName" value="IcedOutIndustries" />
+         </UrlAndUserName>
++        <UrlAndUserName>
++          <option name="url" value="https://github.com/DarylDrake/Sauceboard2.git" />
++          <option name="userName" value="" />
++        </UrlAndUserName>
+       </list>
+     </option>
++    <option name="cloneParentDir" value="$USER_HOME$/Desktop" />
+   </component>
+ </application>
+\ No newline at end of file

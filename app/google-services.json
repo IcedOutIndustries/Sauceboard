@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "688770154356",
+    "firebase_url": "https://admob-app-id-9378916022.firebaseio.com",
+    "project_id": "admob-app-id-9378916022",
+    "storage_bucket": "admob-app-id-9378916022.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:688770154356:android:08263abfa5d464b3",
+        "android_client_info": {
+          "package_name": "com.icedoutindustries.sauceboard"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "688770154356-38gse2q7bf8fjl8r0c1b9nn4nt4lclrs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUuvW3-il157U7a0_MzMr8o5i1ep_00Tw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:688770154356:android:779876a0aa85dc1c",
+        "android_client_info": {
+          "package_name": "com.sauceboard.icedoutindustries"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "688770154356-38gse2q7bf8fjl8r0c1b9nn4nt4lclrs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUuvW3-il157U7a0_MzMr8o5i1ep_00Tw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
