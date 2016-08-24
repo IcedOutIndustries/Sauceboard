@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         // Initialize the Mobile Ads SDK.
-        MobileAds.initialize(getApplicationContext(), "ca-app-pub-6234954892387302~1268889270");
+        MobileAds.initialize(getApplicationContext(), "ca-app-pub-6234954892387302~1626986071");
 
         // Gets the ad view defined in layout/ad_fragment.xml with ad unit ID set in
         // values/strings.xml.
@@ -41,9 +41,8 @@ public class MainActivity extends AppCompatActivity {
         // get test ads on a physical device. e.g.
         // "Use AdRequest.Builder.addTestDevice("ABCDEF012345") to get test ads on this device."
         AdRequest adRequest = new AdRequest.Builder()
-               // .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
+                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
                 .build();
-
         // Start loading the ad in the background.
         mAdView.loadAd(adRequest);
 
